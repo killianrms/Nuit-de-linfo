@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Le Buff Bing Chilling</title>
+  <link href="css/navbar.css" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <script src="js/script.js"></script>
+  <script src="js/konami.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="js/exodia.js"></script>
+  
+
+</head>
+
+<body class="pollution-gradient">
+  <header>
+    <nav role="navigation">
+      <div id="menuToggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+          <a href="#" id="first"><li class="active">Home</li></a>
+          <a href="infeau.html"><li>Information</li></a>
+          <a href="chatgpt.html"><li>IA</li></a>
+          <a href="contact.html"><li>Contact</li></a>
+          <a href="quiz.html"><li>Quiz</li></a>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+  
+    <section id="content">
+      <h1>Impacts du changement climatique</h1>
+      <h2>Évolution des températures mondiales depuis 1850</h2>
+      <p>L'évolution de la température moyenne annuelle mondiale est représentée sous forme d'écart à la moyenne sur la période de référence 1850-1900. Le réchauffement de la température moyenne mondiale est très net : écart proche de 0 °C jusqu'en 1920, écart ensuite positif jusque vers 1970, puis réchauffement net, l'écart est systématiquement supérieur à 0,40 °C depuis le début des années 1980. La décennie 2000-2019 (avec une température supérieure de 0,66 °C à la moyenne 1961-1990) a été plus chaude de 0,19 °C que la décennie 2000-2009 (0,47 °C au-dessus de la moyenne 1961-1990). Malgré l'effet refroidissant d'un épisode La Niña au cours des trois dernières années, les huit dernières années (2015-2022) sont les plus chaudes jamais enregistrées (Source : OMM). En 2022, la température moyenne mondiale a été supérieure de 1,15 °C à celle de la période préindustrielle, dopée par des concentrations de gaz à effet de serre qui ont battu de nouveaux records.</p>
+      <img src="images/moyenne.png" alt="évolution depuis 1850">
+    </section>
+  </main>
+  <footer>
+    <section id="footer" class="footer">
+      <div class="container">
+        <a id="back-to-top" href="#"><img src="images/arrow.svg" alt="logo"></a>
+        <div class="top-footer-section">
+          <div class="link-section">
+            <div class="link-box">
+              <a href="https://x.com/aerozoff"><img src="images/twitter.svg" alt="logo">Twitter</a>
+              <a href="https://instagram.com/aerozoff"><img src="images/instagram.svg" alt="logo">Instagram</a>
+              <a href="https://youtube.com/@aerozoff"><img src="images/youtube.svg" alt="logo">Youtube</a>
+              <a href="https://github.com/killianrms/Nuit-de-linfo"><img src="images/github.svg" alt="logo">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-footer-section">
+          <p>
+            <a id="copyrightButton" href="#footer">©</a>
+           Le Buff Chinois ~ BING CHILLING
+          </p>
+        </div>
+        <div id="hiddenImage" class="hidden">
+          <img  src="images/egg.jpg" alt="EasterEgg" >
+        </div>
+        
+      </div>
+    </section>
+  </footer>
+</body>
+<script>
+  var monLien = document.getElementById("copyrightButton");
+  monLien.addEventListener("click", onClickLinkHandler);
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var homeButton = document.querySelector("#first");
+    var audio = new Audio("prout.mp3");
+    homeButton.addEventListener("click", function () {
+      audio.play();
+    });
+  });  
+  
+  var nombreDeClics = 0;
+      function onClickLinkHandler(event) {
+          event.preventDefault();
+          var maDiv = document.getElementById('hiddenImage');
+          nombreDeClics++;
+          if (nombreDeClics > 10) {
+              maDiv.classList.remove('hidden');
+          }
+      }
+      var monLien = document.getElementById('copyrightButton');
+      monLien.addEventListener('click', onClickLinkHandler);
+  </script>
+</html>

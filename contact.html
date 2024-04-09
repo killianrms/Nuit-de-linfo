@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Le Buff Bing Chilling</title>
+  <link href="css/navbar.css" rel="stylesheet" type="text/css">
+  <link href="css/contact.css" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <script src="js/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+</head>
+
+<body class="pollution-gradient">
+  <header>
+    <nav role="navigation">
+      <div id="menuToggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+          <a href="index.html" ><li>Home</li></a>
+          <a href="infeau.html"><li>Information</li></a>
+          <a href="chatgpt.html"><li>IA</li></a>
+          <a href="#" id="first"><li class="active">Contact</li></a>
+          <a href="quiz.html"><li>Quiz</li></a>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div>
+      <form method="get">
+        <fieldset>
+          <legend>
+            Informations personnelles
+          </legend>
+          <div>
+            <label for="nom">Nom :</label>
+            <input id="nom" class="input" name="nom" type="text" size="30" placeholder="Votre Nom">
+          </div>
+          <div>
+            <label for="prénom">Prénom :</label>
+            <input id="prénom" class="input" name="prénom" type="text" size="30" placeholder="Votre Prénom"">
+          </div>
+          <div>
+            <label for="mail">Adresse mail :</label>
+            <input type="email" id="mail" name="email" placeholder="adresse@gmail.com">
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>
+            Informations Supplémentaires :
+          </legend>
+          <label for="date">Date à laquelle vous souhaitez être recontacté :</label>
+          <input type="date" id="date" name="date" required>
+          <div>
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="4" cols="50" placeholder="Votre message"></textarea>
+          </div>
+          <input type="submit" id="send" value="Soumettre">
+        </fieldset>
+      </form>
+    </div>
+  </main>
+  <footer>
+      <section id="footer" class="footer">
+        <div class="container">
+          <a id="back-to-top" href="#"><img src="images/arrow.svg" alt="logo"></a>
+          <div class="top-footer-section">
+            <div class="link-section">
+              <div class="link-box">
+                <a href="https://x.com/aerozoff"><img src="images/twitter.svg" alt="logo">Twitter</a>
+                <a href="https://instagram.com/aerozoff"><img src="images/instagram.svg" alt="logo">Instagram</a>
+                <a href="https://youtube.com/@aerozoff"><img src="images/youtube.svg" alt="logo">Youtube</a>
+                <a href="https://github.com/killianrms/Nuit-de-linfo"><img src="images/github.svg" alt="logo">GitHub</a>
+              </div>
+            </div>
+          </div>
+          <div class="bottom-footer-section">
+            <p>
+              <a id="copyrightButton" href="#footer">©</a>
+             Le Buff Chinois ~ BING CHILLING
+            </p>
+          </div>
+          <div id="hiddenImage" class="hidden">
+            <img  src="images/egg.jpg" alt="EasterEgg" >
+          </div>
+
+        </div>
+      </section>
+    </footer>
+  </body>
+  <script>
+    var nombreDeClics = 0;
+
+        // Fonction à exécuter lors du clic sur le lien
+        function onClickLinkHandler(event) {
+            // Empêche le comportement par défaut du lien (naviguer vers une nouvelle page)
+            event.preventDefault();
+
+            // Obtenez une référence vers la div que vous souhaitez manipuler
+            var maDiv = document.getElementById('hiddenImage');
+
+            // Incrémentez le compteur de clics
+            nombreDeClics++;
+
+            // Si le nombre de clics est inférieur ou égal à 10, toggle la classe 'cacher'
+            if (nombreDeClics > 10) {
+                maDiv.classList.remove('hidden');
+            }
+        }
+
+        // Obtenez une référence vers le lien que vous souhaitez détecter
+        var monLien = document.getElementById('copyrightButton');
+
+        // Ajoutez un écouteur d'événement 'click' au lien
+        monLien.addEventListener('click', onClickLinkHandler);
+    </script>
+  </html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Page Title</title>
+  <link rel="stylesheet" href="css/3301.css">
+  <script src="js/ajoutcacher.js"></script>
+</head>
+
+<body>
+
+  <main>
+
+
+    
+    <div class="triangle-left" onclick="redirigerVersAutrePage()">
+      
+    </div>
+    
+    <p> Si vous êtes arrivés ici c'est que vous êtes un amateur de jeu vidéo ou juste quelqu'un qui aime chercher des
+      easters eggs cachés par les développeurs </br>
+      La suite se trouve devant vos yeux
+    </p>
+
+    <p class="black">
+      C'est trop <a href="#" id="monLien">facile</a> si c'est juste ça
+    </p>
+
+    <div id="maDiv" class="cacher">
+      <p>Pour trouver le nouveau lien il vous faudra mettre :  
+      /"notre-nom"/ + "quand est-ce que le réchauffement climatique
+        à commencé ?" en binaire .html</p>
+    </div>
+  </main>
+
+</body>
+<script>
+  // Fonction à exécuter lors du clic sur le lien
+  function onClickLinkHandler(event) {
+    // Empêche le comportement par défaut du lien (naviguer vers une nouvelle page)
+    event.preventDefault();
+
+    // Obtenez une référence vers la div que vous souhaitez manipuler
+    var maDiv = document.getElementById('maDiv');
+
+    // Toggle la classe 'cacher' de la div
+    maDiv.classList.toggle('cacher');
+  }
+
+  // Obtenez une référence vers le lien que vous souhaitez détecter
+  var monLien = document.getElementById('monLien');
+
+  // Ajoutez un écouteur d'événement 'click' au lien
+  monLien.addEventListener('click', onClickLinkHandler);
+
+
+      function redirigerVersAutrePage() {
+          // Modifier l'URL pour rediriger vers une autre page
+          window.location.href = 'index.html';
+      }
+
+</script>
+
+</html>

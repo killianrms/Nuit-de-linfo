@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Le Buff Bing Chilling</title>
+  <link href="css/navbar.css" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link href="css/infeau.css" rel="stylesheet" type="text/css">
+  <script src="js/script.js"></script>
+  <script src="js/navbar.js"></script>
+  
+</head>
+
+<body class="pollution-gradient">
+
+  <header>
+    <nav role="navigation">
+      <div id="menuToggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+          <a href="index.html"><li>Home</li></a>
+          <a href="#" id="first"><li class="active">Information</li></a>
+          <a href="chatgpt.html"><li>IA</li></a>
+          <a href="contact.html"><li>Contact</li></a>
+          <a href="quiz.html"><li>Quiz</li></a>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="content">
+      <h1>Pourquoi la Terre chauffe ?</h1>
+      <h2>L’effet de serre</h2>
+      <p>La Terre reçoit en permanence de l’énergie du soleil. La partie de cette énergie qui n’est pas réfléchie par
+        l’atmosphère, notamment les nuages, ou la surface terrestre est absorbée par la surface terrestre qui se
+        réchauffe en l’absorbant. En contre-partie, les surfaces et l’atmosphère émettent du rayonnement infra-rouge,
+        d’autant plus intense que les surfaces sont chaudes. Une partie de ce rayonnement est absorbée par certains
+        gaz et par les nuages, c’est le phénomène de l’effet de serre. L’autre partie est émise vers l’univers et la
+        température de la Terre s’ajuste pour trouver un équilibre entre l’énergie du soleil absorbée en permanence
+        et celle réémise sous forme de rayonnement infra-rouge. Une augmentation des gaz à effet de serre suite aux
+        activités de l’homme piège une partie de ce rayonnement, ce qui provoque une hausse de la température des
+        surfaces jusqu’à trouver un nouvel équilibre. C’est la cause principale du réchauffement climatique observé
+        ces dernières décennies.</p>
+      <img src="images/atmos.png" alt="atmosphere">
+    </section>
+    <section id="content">
+      <h1>Les principaux gaz à effet de serre</h1>
+      <p>Certains gaz à effet de serre sont naturellement présents dans l’air (vapeur d’eau, dioxyde de carbone). Si
+        l’eau (vapeur et nuages) est l’élément qui contribue le plus à l’effet de serre « naturel », l’augmentation de
+        l’effet de serre depuis la révolution industrielle du XIXe siècle est induite par les émissions d’autres gaz
+        à effet de serre provoquées par notre activité :</p>
+      <ul>
+        <li>L’accumulation du dioxyde de carbone (CO2) dans l’atmosphère contribue pour 2/3 de l’augmentation de
+          l’effet de serre induite par les activités humaines (combustion de gaz, de pétrole, déforestation,
+          cimenteries, etc.). C’est pourquoi on mesure usuellement l’effet des autres gaz à effet de serre en
+          équivalent CO2 (eq. CO2). Les émissions de CO2 actuelles auront un impact sur les concentrations dans
+          l’atmosphère et sur la température du globe pendant des dizaines d’années, car sa durée de vie dans
+          l’atmosphère est supérieure à la centaine d’années.</li>
+        <li>Le méthane (CH4) : les élevages des ruminants, les rizières inondées, les décharges d’ordures et les
+          exploitations pétrolières et gazières constituent les principales sources de méthane induites par les
+          activités humaines. La durée de vie du méthane dans l’atmosphère est de l’ordre de 12 ans.</li>
+        <li>Le protoxyde d’azote (N2O) provient des engrais azotés et de certains procédés chimiques. Sa durée de
+          vie est de l’ordre de 120 ans.</li>
+        <li>L’hexafluorure de soufre (SF6) a une durée de vie de 50 000 ans dans l’atmosphère.</li>
+      </ul>
+      <img src="images/types_de_gaz.png" alt="Types de gaz à effet de serre">
+    </section>
+  </main>
+  <footer>
+      <section id="footer" class="footer">
+        <div class="container">
+          <a id="back-to-top" href="#"><img src="images/arrow.svg" alt="logo"></a>
+          <div class="top-footer-section">
+            <div class="link-section">
+              <div class="link-box">
+                <a href="https://x.com/aerozoff"><img src="images/twitter.svg" alt="logo">Twitter</a>
+                <a href="https://instagram.com/aerozoff"><img src="images/instagram.svg" alt="logo">Instagram</a>
+                <a href="https://youtube.com/@aerozoff"><img src="images/youtube.svg" alt="logo">Youtube</a>
+                <a href="https://github.com/killianrms/Nuit-de-linfo"><img src="images/github.svg" alt="logo">GitHub</a>
+              </div>
+            </div>
+          </div>
+          <div class="bottom-footer-section">
+            <p>
+              <a id="copyrightButton" href="#footer">©</a>
+             Le Buff Chinois ~ BING CHILLING
+            </p>
+          </div>
+          <div id="hiddenImage" class="hidden">
+            <img  src="images/egg.jpg" alt="EasterEgg" >
+          </div>
+
+        </div>
+      </section>
+    </footer>
+  </body>
+  <script>
+    var nombreDeClics = 0;
+
+        // Fonction à exécuter lors du clic sur le lien
+        function onClickLinkHandler(event) {
+            // Empêche le comportement par défaut du lien (naviguer vers une nouvelle page)
+            event.preventDefault();
+
+            // Obtenez une référence vers la div que vous souhaitez manipuler
+            var maDiv = document.getElementById('hiddenImage');
+
+            // Incrémentez le compteur de clics
+            nombreDeClics++;
+
+            // Si le nombre de clics est inférieur ou égal à 10, toggle la classe 'cacher'
+            if (nombreDeClics > 10) {
+                maDiv.classList.remove('hidden');
+            }
+        }
+
+        // Obtenez une référence vers le lien que vous souhaitez détecter
+        var monLien = document.getElementById('copyrightButton');
+
+        // Ajoutez un écouteur d'événement 'click' au lien
+        monLien.addEventListener('click', onClickLinkHandler);
+    </script>
+  </html>
