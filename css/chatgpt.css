@@ -1,0 +1,93 @@
+body.gradient {
+  background: linear-gradient(to bottom, #4CAF50 0%, #B0B0B0 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.wrap {
+  margin:15px;
+}
+
+#chatbox {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+#chatlog {
+  height: 500px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+#userInput {
+  width: 80%;
+  padding: 8px;
+  margin-right: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+
+.button {
+  width: 140px;
+  height: 45px;
+  
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.button:hover {
+  background-color: #2EE59D;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+/* Add this inside the existing media query for small screens */
+@media only screen and (max-width:768px) {
+  #chatbox {
+    width: 90%;
+    margin: auto; 
+    text-align: center; 
+    max-height:80%;
+  }
+
+  #userInput {
+    width: 100%; /* Adjust the width of the input field to 100% */
+    box-sizing: border-box; /* Include padding and border in the total width */
+    margin-top: 10px; /* Add some space between the input field and button */
+  }
+
+  .wrap {
+    text-align: center; /* Center the send button */
+  }
+}

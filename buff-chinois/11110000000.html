@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000; /* Couleur de fond, facultative */
+        }
+
+      a{
+        color:black;
+      }
+
+        img {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        h1 {
+            color: #fff; /* Couleur du texte */
+            font-size: 2em; /* Taille de la police */
+            text-align: center;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+      .triangle-left{
+        position: absolute;
+        top:0px;
+        left:0px;
+        width: 0;
+        height: 0;
+        margin: 30px auto;
+
+        border-top:
+          18px solid transparent;
+        border-bottom:
+          18px solid transparent;
+        border-right:
+          30px solid white;
+      }
+    </style>
+    <title>Fond d'écran GIF avec Titre</title>
+</head>
+<body>
+    <h1>Bien joué peut être avez vous déja trouver les autres easters eggs</h1>
+  <div class="triangle-left" onclick="redirigerVersAutrePage()">
+
+  </div>
+
+
+</body>
+
+  <script>
+    function redirigerVersAutrePage() {
+        // Modifier l'URL pour rediriger vers une autre page
+        window.location.href = '../index.html';
+    }
+  </script>
+</html>

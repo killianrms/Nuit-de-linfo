@@ -1,0 +1,75 @@
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+fieldset {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input,
+select,
+textarea {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  background-color: #3ca0e7;
+  color: white;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #1f70a3;
+}
+
+textarea[name="message"] {
+  resize: none;
+  height: 200px;
+
+}
+
+@media only screen and (max-width: 768px) {
+  #menuToggle {
+    display: block;
+    cursor: pointer;
+  }
+
+
+  #menuToggle:checked + ul {
+    display: block;
+  }
+}
+
+/* Basic responsive styles for form */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+input, textarea {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+/* Responsive footer styles */
+
+
+/* Add more responsive styles as needed */

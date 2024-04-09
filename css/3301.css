@@ -1,0 +1,52 @@
+body {
+  background-color: black;
+  height: 100%;
+}
+main {
+  width: 100%;
+  margin-top: 25%;
+}
+
+p {
+  color: #ffffff;
+  text-align: center;
+  vertical-align: baseline;
+}
+
+.black {
+  color: black;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover{ cursor: default }
+
+#urlnew {
+  position: absolute;
+  right:0px;
+  top:0px;
+
+}
+
+.cacher {
+    display: none;
+}
+
+.triangle-left{
+  position: absolute;
+  top:0px;
+  left:0px;
+  width: 0;
+  height: 0;
+  margin: 30px auto;
+
+  border-top:
+    18px solid transparent;
+  border-bottom:
+    18px solid transparent;
+  border-right:
+    30px solid white;
+}
